@@ -107,3 +107,9 @@ Show a chart with the number of upcoming events in each city.
 - **Given** the user wants to see a chart displaying the upcoming events in each city
 - **When** the user tries to navigate to the page with the charts
 - **Then** the app should show the user charts with information about the number of upcoming events
+
+## Serverless
+
+---
+
+This app will use AWS lambda serverless functions to interact with the Google OAuth authorization server (Google Calendar API) to gain authorization tokens and make requests.
