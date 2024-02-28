@@ -45,7 +45,8 @@
         "rules": {
           "testing-library/prefer-presence-queries": "off",
           "testing-library/no-render-in-setup": "off",
-          "testing-library/prefer-screen-queries": "off"
+          "testing-library/prefer-screen-queries": "off",
+          "testing-library/render-result-naming-convention": "off"
         }
       }
     ]
