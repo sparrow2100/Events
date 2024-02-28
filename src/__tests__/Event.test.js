@@ -2,14 +2,12 @@ import { render } from "@testing-library/react";
 import Event from "../components/Event.js";
 import { getEvents } from "../api";
 describe("<Event /> component", () => {
-  let EventComponent;
-  beforeEach(() => {
-    EventComponent = render(<Event />);
-  });
   //  FEATURE 2 SCENARIO 1: AN EVENT ELEMENT IS COLLAPSED BY DEFAULT
   // Test: the collapsed event element renders details button with the title show details
 
-  test("renders details button with the title show details", () => {
+  test("renders details button with the title show details", async () => {
+    const allEvents = await getEvents();
+    const EventComponent = render(<Event event={allEvents[0]} />);
     expect(EventComponent.queryByText("show details")).toBeInTheDocument();
   });
 });
