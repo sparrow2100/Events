@@ -74,23 +74,3 @@ describe("<Event /> component", () => {
     expect(description).toBeNull();
   });
 });
-
-//FEATURE 3 SCENARIO 1: WHEN THE USER HASN'T SPECIFIED A NUMBER, 32 EVENTS ARE SHOWN BY DEFAULT
-
-// Test: an input for entering the desired number of events is displayed
-
-// Test: When the user searches for events but hasn't specified a number, 32 events should be displayed
-
-// Test: If there are no events available in a city, the app should display "no events found"
-
-// FEATURE 3 SCENARIO 2: THE USER CAN CHANGE THE NUMBER OF EVENTS DISPLAYED
-
-// Test: non-numeric input triggers an error message
-
-// Test: If the number the user enters is higher than the available events, all the events are displayed
-
-// Test: When the user clicks submit, the number of events displayed matches the number in the input
-
-// Test: If the number the user enters is higher than the availabe events, a message is displayed: "There are only ___ events available"
-
-// Test: If the input is empty 32 events are displayed
