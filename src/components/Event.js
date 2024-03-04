@@ -13,7 +13,10 @@ const Event = ({ event }) => {
         </p>
       ) : null}
       {expanded ? (
-        <button onClick={() => setExpanded(false)} className="details-btn">
+        <button
+          onClick={() => setExpanded(false)}
+          className="details-btn hide-btn"
+        >
           hide details
         </button>
       ) : (

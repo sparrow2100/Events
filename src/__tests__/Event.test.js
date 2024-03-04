@@ -28,7 +28,7 @@ describe("<Event /> component", () => {
     const allEvents = await getEvents();
     const EventComponent = render(<Event event={allEvents[0]} />);
     expect(
-      EventComponent.queryByText(allEvents[0].created)
+      EventComponent.queryByText(new Date(allEvents[0].created).toUTCString())
     ).toBeInTheDocument();
   });
 
@@ -58,7 +58,7 @@ describe("<Event /> component", () => {
 
     const expandButton = EventComponent.queryByText("show details");
     await user.click(expandButton);
-    const description = document.querySelector("#description");
+    const description = document.querySelector(".details");
     expect(description).toBeInTheDocument();
   });
 
