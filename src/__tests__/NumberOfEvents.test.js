@@ -16,7 +16,9 @@ describe("<NumberOfEvents /> component", () => {
 
   test("number of events textbox value changes by user", async () => {
     const user = userEvent.setup();
-    const NumberComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
+    const NumberComponent = render(
+      <NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => {}} />
+    );
     const textBox = NumberComponent.queryByRole("spinbutton");
     await user.type(textBox, "{backspace}{backspace}12");
     await user.type(textBox, "{Enter}");
