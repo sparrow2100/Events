@@ -59,6 +59,7 @@ export const getEvents = async () => {
 
     if (token) {
       removeQuery();
+
       const url =
         "https://hbfcqz77kj.execute-api.us-east-1.amazonaws.com/dev/api/get-events" +
         "/" +
@@ -67,6 +68,7 @@ export const getEvents = async () => {
       const result = await response.json();
       if (result) {
         localStorage.setItem("lastEvents", JSON.stringify(result.events));
+
         return result.events;
       } else return null;
     }
