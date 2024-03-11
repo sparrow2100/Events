@@ -5,6 +5,7 @@ import EventList from "./components/EventList";
 import NumberOfEvents from "./components/NumberOfEvents";
 import { getEvents, extractLocations } from "./api";
 import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
+import CityEventsChart from "./components/CityEventsChart";
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -19,7 +20,9 @@ const App = () => {
     if (navigator.onLine) {
       setWarningAlert("");
     } else {
-      setWarningAlert("You are offline");
+      setWarningAlert(
+        "You are offline, the events have been loaded from the cache."
+      );
     }
     fetchData();
   }, [currentCity, currentNOE]);
@@ -50,6 +53,7 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}
       />
+      <CityEventsChart allLocations={allLocations} events={events} />
       <EventList events={events} />
     </div>
   );
