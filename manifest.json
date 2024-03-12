@@ -7,22 +7,17 @@
       "sizes": "48x48",
       "type": "image/x-icon"
     },
+
     {
-      "src": "meet-app-144.png",
+      "src": "events-app-250.png",
       "type": "image/png",
-      "sizes": "144x144",
+      "sizes": "250x250",
       "purpose": "any"
     },
     {
-      "src": "meet-app-192.png",
+      "src": "events-app-500.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "maskable"
-    },
-    {
-      "src": "meet-app-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "500x500",
       "purpose": "maskable"
     }
   ],
