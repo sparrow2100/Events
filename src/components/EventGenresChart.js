@@ -1,9 +1,11 @@
-import { ResponsiveContainer, PieChart, Pie, Legend } from "recharts";
+import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { useState, useEffect } from "react";
 
 const EventGenresChart = ({ events }) => {
   const [data, setData] = useState([]);
   const genres = ["React", "JavaScript", "Node", "jQuery", "Angular"];
+
+  const colours = ["#966CE0", "#b99bf2", "#7537e8", "#794ec9", "#674c99"];
 
   const renderCustomizedLabel = ({
     cx,
@@ -55,7 +57,11 @@ const EventGenresChart = ({ events }) => {
           data={data}
           fill="#966CE0"
           label={renderCustomizedLabel}
-        />
+        >
+          {data.map((genre, index) => {
+            return <Cell key={`cell-${index}`} fill={colours[index]} />;
+          })}
+        </Pie>
       </PieChart>
     </ResponsiveContainer>
   );

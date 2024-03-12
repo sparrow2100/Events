@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+h3 {
+  font-size: 1.75rem;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -15,6 +19,15 @@ ul {
 
 p {
   margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  /* background-color: #8d67d3; */
+  transition: all 200ms ease-in-out;
+  background-color: white;
+  color: #8d67d3;
+  border: 2px solid #8d67d3;
 }
 
 input[type="text"],
@@ -55,7 +68,8 @@ input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: #f0eafc;
   cursor: default;
 }
 
@@ -78,6 +92,11 @@ input[type="number"] {
   background-color: #f0eafc;
 }
 
+.event:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 200ms ease-in-out;
+}
+
 .details-btn {
   /* position: absolute;
   right: 5px;
@@ -90,6 +109,7 @@ input[type="number"] {
   cursor: pointer;
   background-color: #966ce0;
   color: white;
+  border: 2px solid #8d67d3;
 }
 
 .alerts-container {
