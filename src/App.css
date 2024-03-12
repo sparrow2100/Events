@@ -23,7 +23,6 @@ p {
 }
 
 button:hover {
-  /* background-color: #8d67d3; */
   transition: all 200ms ease-in-out;
   background-color: white;
   color: #8d67d3;
@@ -97,10 +96,22 @@ input[type="number"] {
   transition: all 200ms ease-in-out;
 }
 
+#number-of-events {
+  display: flex;
+  flex-direction: column;
+}
+
+.details {
+  margin-top: 25px;
+}
+
+.caption {
+  font-style: italic;
+  color: #a9a9a9;
+  margin-top: 15px;
+}
+
 .details-btn {
-  /* position: absolute;
-  right: 5px;
-  bottom: 5px; */
   padding: 10px 15px;
   margin-top: 20px;
   border-radius: 4px;
@@ -124,7 +135,7 @@ input[type="number"] {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 768px) {

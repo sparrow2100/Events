@@ -1,4 +1,4 @@
-import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import { ResponsiveContainer, PieChart, Pie, Cell, Label } from "recharts";
 import { useState, useEffect } from "react";
 
 const EventGenresChart = ({ events }) => {
@@ -17,8 +17,9 @@ const EventGenresChart = ({ events }) => {
   }) => {
     const RADIAN = Math.PI / 180;
     const radius = outerRadius;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
+    const distance = 20;
+    const x = cx + (radius + distance) * Math.cos(-midAngle * RADIAN) * 1.07;
+    const y = cy + (radius + distance) * Math.sin(-midAngle * RADIAN) * 1.07;
     return percent ? (
       <text
         x={x}
@@ -50,7 +51,7 @@ const EventGenresChart = ({ events }) => {
   }, [`${events}`]);
 
   return (
-    <ResponsiveContainer width="99%" height={400}>
+    <ResponsiveContainer width="99%" height={350}>
       <PieChart>
         <Pie
           dataKey="value"
@@ -63,6 +64,7 @@ const EventGenresChart = ({ events }) => {
           })}
         </Pie>
       </PieChart>
+      <p className="caption">percentage of event topic</p>
     </ResponsiveContainer>
   );
 };
