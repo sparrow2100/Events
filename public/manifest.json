@@ -1,13 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Events",
+  "name": "Events",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "48x48",
-      "type": "image/x-icon"
-    },
-
     {
       "src": "events-app-250.png",
       "type": "image/png",
