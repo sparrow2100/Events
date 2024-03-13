@@ -112,4 +112,36 @@ Show a chart with the number of upcoming events in each city.
 
 ## Serverless
 
-This app will use AWS lambda serverless functions to interact with the Google OAuth authorization server (Google Calendar API) to gain authorization tokens and make requests.
+This app uses AWS lambda serverless functions to interact with the Google OAuth authorization server (Google Calendar API) to gain authorization tokens and make requests.
+
+---
+
+## Dependencies
+
+- @testing-library/jest-dom ^6.4.2
+- @testing-library/react ^14.2.1
+- @testing-library/user-event ^14.5.2
+- atatus-spa ^4.6.0
+- react ^18.2.0
+- react-dom ^18.2.0
+- react-scripts 5.0.1
+- recharts ^2.12.2
+- web-vitals ^2.1.4
+- workbox-background-sync ^6.6.0
+- workbox-broadcast-update ^6.6.0
+- workbox-cacheable-response ^6.6.0
+- workbox-core ^6.6.0
+- workbox-expiration ^6.6.0
+- workbox-google-analytics ^6.6.1
+- workbox-navigation-preload ^6.6.0
+- workbox-precaching ^6.6.0
+- workbox-range-requests ^6.6.0
+- workbox-routing ^6.6.0
+- workbox-strategies ^6.6.0
+- workbox-streams ^6.6.0
+
+---
+
+## API
+
+The API used for this project is the **Google Calendar API**
